@@ -1,5 +1,7 @@
 # pf-proj-front
 
+**Para a prova: veja o [COMO_MEXER.md](COMO_MEXER.md).**
+
 Lista e cadastra avaliações. React + Vite, login com Auth0, deploy na Vercel.
 
 O passo a passo do Auth0 está no README do `pf-proj-back`.
