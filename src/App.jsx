@@ -119,7 +119,6 @@ export default function App() {
             <th>Título</th>
             <th>Prioridade</th>
             <th>Descrição</th>
-            <th>Deletado</th>
             <th>Data</th>
           </tr>
         </thead>
@@ -130,7 +129,6 @@ export default function App() {
               <td>{item.titulo}</td>
               <td>{item.prioridade}</td>
               <td>{item.descricao}</td>
-              <td>{item.deletado ? "Sim" : "Não"}</td>
               <td>{new Date(item.dataAvaliacao).toLocaleString("pt-BR")}</td>
             </tr>
           ))}
