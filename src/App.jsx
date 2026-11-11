@@ -111,7 +111,7 @@ export default function App() {
         </form>
       )}
 
-      <h2>Avaliações</h2>
+      <h2>Tarefas</h2>
       <table>
         <thead>
           <tr>
