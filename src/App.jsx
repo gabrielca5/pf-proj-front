@@ -4,6 +4,7 @@ import { API, CLAIM_ROLES } from "./config.js";
 
 // Campos do formulario de cadastro. Na prova, troque aqui e na tabela la embaixo.
 const VAZIO = {
+  emailAvaliador: "",
   emailAvaliado: "",
   nota: "",
   comentarios: "",
