@@ -29,6 +29,8 @@ Dentro do `App.jsx`:
 `VAZIO`, um `<input>` no form, um `<th>` e um `<td>` na tabela. Numero: `type="number"`. Texto longo: `<textarea>`.
 
 ### Quem ve o que
+Esconder no front e so visual. Quem barra de verdade e o back (`@PreAuthorize`), entao a role de cada rota se define la, no `COMO_MEXER.md` do back.
+
 - So ADMIN: `{admin && (...)}`, como esta o formulario.
 - So USER: `{roles.includes('USER') && (...)}`.
 - Qualquer logado: sem condicao.
