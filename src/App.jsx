@@ -98,19 +98,11 @@ export default function App() {
               setForm({ ...form, emailAvaliado: e.target.value })
             }
           />
-          <input
-            type="number"
-            placeholder="Nota (0 a 10)"
-            min="0"
-            max="10"
-            required
-            value={form.nota}
-            onChange={(e) => setForm({ ...form, nota: e.target.value })}
-          />
+
           <textarea
-            placeholder="Comentários"
-            value={form.comentarios}
-            onChange={(e) => setForm({ ...form, comentarios: e.target.value })}
+            placeholder="Descrição"
+            value={form.descricao}
+            onChange={(e) => setForm({ ...form, descricao: e.target.value })}
           />
           <input
             type="text"
@@ -136,8 +128,7 @@ export default function App() {
             <th>Avaliado</th>
             <th>Título</th>
             <th>Prioridade</th>
-            <th>Nota</th>
-            <th>Comentários</th>
+            <th>Descrição</th>
             <th>Data</th>
           </tr>
         </thead>
@@ -148,8 +139,7 @@ export default function App() {
               <td>{item.emailAvaliado}</td>
               <td>{item.titulo}</td>
               <td>{item.prioridade}</td>
-              <td>{item.nota}</td>
-              <td>{item.comentarios}</td>
+              <td>{item.descricao}</td>
               <td>{new Date(item.dataAvaliacao).toLocaleString("pt-BR")}</td>
             </tr>
           ))}
