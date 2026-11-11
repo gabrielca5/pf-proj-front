@@ -5,7 +5,6 @@ import { API, CLAIM_ROLES } from "./config.js";
 // Campos do formulario de cadastro. Na prova, troque aqui e na tabela la embaixo.
 const VAZIO = {
   emailAvaliador: "",
-  emailAvaliado: "",
   nota: "",
   comentarios: "",
   titulo: "",
@@ -90,15 +89,6 @@ export default function App() {
       {admin && (
         <form onSubmit={cadastrar}>
           <h2>Nova avaliação</h2>
-          <input
-            type="email"
-            placeholder="Email do avaliado"
-            required
-            value={form.emailAvaliado}
-            onChange={(e) =>
-              setForm({ ...form, emailAvaliado: e.target.value })
-            }
-          />
 
           <textarea
             placeholder="Descrição"
@@ -125,8 +115,7 @@ export default function App() {
       <table>
         <thead>
           <tr>
-            <th>Avaliador</th>
-            <th>Avaliado</th>
+            <th>Criado por</th>
             <th>Título</th>
             <th>Prioridade</th>
             <th>Descrição</th>
@@ -137,7 +126,6 @@ export default function App() {
           {itens.map((item) => (
             <tr key={item.id}>
               <td>{item.emailAvaliador}</td>
-              <td>{item.emailAvaliado}</td>
               <td>{item.titulo}</td>
               <td>{item.prioridade}</td>
               <td>{item.descricao}</td>
