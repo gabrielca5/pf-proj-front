@@ -3,7 +3,13 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { API, CLAIM_ROLES } from "./config.js";
 
 // Campos do formulario de cadastro. Na prova, troque aqui e na tabela la embaixo.
-const VAZIO = { emailAvaliado: "", nota: "", comentarios: "" };
+const VAZIO = {
+  emailAvaliado: "",
+  nota: "",
+  comentarios: "",
+  titulo: "",
+  prioridade: "",
+};
 
 export default function App() {
   const {
@@ -105,6 +111,18 @@ export default function App() {
             placeholder="Comentários"
             value={form.comentarios}
             onChange={(e) => setForm({ ...form, comentarios: e.target.value })}
+          />
+          <input
+            type="text"
+            placeholder="Título"
+            value={form.titulo}
+            onChange={(e) => setForm({ ...form, titulo: e.target.value })}
+          />
+          <input
+            type="text"
+            placeholder="Prioridade"
+            value={form.prioridade}
+            onChange={(e) => setForm({ ...form, prioridade: e.target.value })}
           />
           <button>Cadastrar</button>
         </form>
