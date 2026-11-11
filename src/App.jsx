@@ -4,7 +4,7 @@ import { API, CLAIM_ROLES } from "./config.js";
 
 // Campos do formulario de cadastro. Na prova, troque aqui e na tabela la embaixo.
 const VAZIO = {
-  emailAvaliador: "",
+  email: "",
   nota: "",
   comentarios: "",
   titulo: "",
@@ -125,7 +125,7 @@ export default function App() {
         <tbody>
           {itens.map((item) => (
             <tr key={item.id}>
-              <td>{item.emailAvaliador}</td>
+              <td>{item.email}</td>
               <td>{item.titulo}</td>
               <td>{item.prioridade}</td>
               <td>{item.descricao}</td>
