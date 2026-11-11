@@ -49,6 +49,14 @@ export default function App() {
       setErro(e.message);
     }
   }
+  async function deletar(id) {
+    try {
+      await chamar({ method: "DELETE", body: JSON.stringify({ id }) });
+      listar();
+    } catch (e) {
+      setErro(e.message);
+    }
+  }
 
   async function cadastrar(evento) {
     evento.preventDefault();
@@ -130,6 +138,9 @@ export default function App() {
               <td>{item.prioridade}</td>
               <td>{item.descricao}</td>
               <td>{new Date(item.dataAvaliacao).toLocaleString("pt-BR")}</td>
+              <td>
+                <button onClick={() => deletar(item.id)}>Deletar</button>
+              </td>
             </tr>
           ))}
         </tbody>
